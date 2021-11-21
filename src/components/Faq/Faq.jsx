@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container,Title,Inner } from '../styles/accordion'
 import faqData from "../../constants/faqs.json"
-import Accordian from '../Accordion/Accordian'
+import Accordion from '../Accordion/Accordian'
 
 
 const Faq = () => {
@@ -11,7 +11,7 @@ const Faq = () => {
                 <Title>Frequently Asked Questions</Title>
                 {
                     faqData.map(faq => (
-                        <Accordian
+                        <Accordion
                         key={faq.id}
                         header={faq.header}
                         body={faq.body}
