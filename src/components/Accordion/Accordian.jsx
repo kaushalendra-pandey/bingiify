@@ -2,7 +2,7 @@ import React,{useState} from 'react'
 import {PropTypes} from "prop-types"
 import {Item,Header,Body} from '../styles/accordion'
 
-const Accordian = ({header,body}) => {
+const Accordion = ({header,body}) => {
     const [toggleShow,setToggleShow] = useState(false)
     
     const handleToggleShow = () => {
@@ -31,9 +31,9 @@ const Accordian = ({header,body}) => {
     )
 }
 
-export default Accordian
+export default Accordion
 
-Accordian.propTypes = {
+Accordion.propTypes = {
     header: PropTypes.String, 
     body: PropTypes.String,
 }
