@@ -4,7 +4,6 @@ import {Item,Header,Body} from '../styles/accordion'
 
 const Accordion = ({header,body}) => {
     const [toggleShow,setToggleShow] = useState(false)
-    
     const handleToggleShow = () => {
         console.log(toggleShow)
         setToggleShow(!toggleShow)
