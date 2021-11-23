@@ -5,9 +5,10 @@ import logo from "../../logo.svg"
 import PropTypes from "prop-types"
 import Feature from '../Feature/Feature'
 import SigninForm from '../SigninForm/SigninForm.jsx'
+import SignupForm from '../SignupForm/SignupForm'
 
 
-const Header = ({show=true}) => {
+const Header = ({signin=false,signup=false}) => {
     return (
         <Background>
             <Container>
@@ -20,7 +21,9 @@ const Header = ({show=true}) => {
             
             </Container>
             {
-                show ? <Feature/> : <SigninForm/>
+                signin ? <SigninForm/> : 
+                signup ? <SignupForm/> :
+                <Feature/>
             }
             
         </Background>
@@ -30,5 +33,6 @@ const Header = ({show=true}) => {
 export default Header
 
 Header.propTypes = {
-    show: PropTypes.bool
+    signin: PropTypes.bool,
+    signup: PropTypes.bool
 }

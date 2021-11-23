@@ -4,13 +4,13 @@ import Header from '../components/Header/Header'
 
 
 
-const Signin = () => {
+const Signup = () => {
     return (
         <>
-        <Header signin={true}/>
+        <Header signup={true}/>
         <Footer/>
         </>
     )
 }
 
-export default Signin
+export default Signup
