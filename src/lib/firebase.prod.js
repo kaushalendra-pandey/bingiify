@@ -8,12 +8,12 @@ import 'firebase/auth';
 import { seedDatabase } from '../seed';
 console.log(process.env.REACT_APP_APIKEY)
 const config = {
-  apiKey: process.env.REACT_APP_apiKey,
-  authDomain: process.env.REACT_APP_authDomain,
-  projectId: process.env.REACT_APP_projectId,
-  storageBucket: process.env.REACT_APP_storageBucket,
-  messagingSenderId: process.env.REACT_APP_messagingSenderId,
-  appId: process.env.REACT_APP_appId
+  apiKey:"AIzaSyBBAU7NFHlnkP3nLZp_jSneCCztxkNCLq4",
+  authDomain: "bingify-2.firebaseapp.com",
+  projectId: "bingify-2",
+  storageBucket: "bingify-2.appspot.com",
+  messagingSenderId: "933801777891",
+  appId: "1:933801777891:web:1d77d386648c2e98ef03d6"
 };
 
 const firebase = Firebase.initializeApp(config);
