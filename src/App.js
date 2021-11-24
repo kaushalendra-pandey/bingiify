@@ -6,9 +6,11 @@ import Signin from "./pages/Signin";
 import Signup from "./pages/Signup";
 import Browse from "./pages/Browse";
 import {IsUserRedirect, ProtectedRoute} from "./helpers/routes"
+import {useAuthListener} from "./utils/hooks/hooks";
 
 function App() {
-  const user = {name:'kaush'}
+  const {curUser : user} = useAuthListener()
+  console.log(user)
   return (
     <Router>
       <Routes>
