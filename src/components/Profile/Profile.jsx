@@ -16,18 +16,17 @@ const Profile = ({user,handleProfileClick}) => {
 
     return (
         <>
-            
             <Container>
                 <Logo src={logo} to="/" alt="Netflix"/>
             </Container>
-             
+             {console.log(">>>>",user)}
             <ProfileContainer>
                 {
                     loading ? <img src="/images/misc/loading.gif" alt="loader" /> :
                     <>
                     <Title> {`Who's watching?`} </Title>
                     <List>
-                        <Item onClick={() => {handleProfileClick({displayName:user?.displayName})}}>
+                        <Item onClick={() => {handleProfileClick({displayName:user?.displayName,photoURL:user.photoURL})}}>
                             <Picture src={"/images/users/1.png"}/>
                             <Name> {user?.displayName} </Name>
 
