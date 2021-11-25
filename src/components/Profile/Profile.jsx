@@ -27,7 +27,7 @@ const Profile = ({user,handleProfileClick}) => {
                     <Title> {`Who's watching?`} </Title>
                     <List>
                         <Item onClick={() => {handleProfileClick({displayName:user?.displayName,photoURL:user.photoURL})}}>
-                            <Picture src={"/images/users/1.png"}/>
+                            <Picture src={`/images/users/${user?.photoURL}.png`}/>
                             <Name> {user?.displayName} </Name>
 
                         </Item>
