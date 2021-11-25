@@ -11,7 +11,7 @@ const Browse = () => {
     console.log(slides)
     return (
        
-       <BrowseContainer/>
+       <BrowseContainer slides={slides}/>
     )
 }
 

@@ -4,7 +4,7 @@ import { Link as ReachRouterLink } from 'react-router-dom';
 export const Background = styled.div`
   display: flex;
   flex-direction: column;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.35)), url(${({ src }) => (src ? `../images/misc/${src}.jpg` : '../images/misc/home-bg.jpg')}) top left / cover
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.35)), url(${(props) => (props.src ? `../images/misc/${props.src}.jpg` : '../images/misc/home-bg.jpg')}) top left / cover
     no-repeat;
   @media (max-width: 1100px) {
     ${({ dontShowOnSmallViewPort }) => dontShowOnSmallViewPort && `background: none;`}
@@ -52,10 +52,10 @@ export const SearchInput = styled.input`
   height: 30px;
   font-size: 14px;
   border-radius: 4px;
-  margin-left: ${({ active }) => (active === true ? '10px' : '0')};
-  padding: ${({ active }) => (active === true ? '0 10px' : '0')};
-  opacity: ${({ active }) => (active === true ? '1' : '0')};
-  width: ${({ active }) => (active === true ? '200px' : '0px')};
+  margin-left: ${({ active }) => (active === true ? '10px' : '10px')};
+  padding: ${({ active }) => (active === true ? '0 10px' : '10px')};
+  opacity: ${({ active }) => (active === true ? '1' : '1')};
+  width: ${({ active }) => (active === true ? '200px' : '200px')};
   &:focus {
     background-color: rgba(0, 0, 0, 0.8);
   }
@@ -108,7 +108,7 @@ export const ButtonLink = styled(ReachRouterLink)`
 `;
 
 export const Picture = styled.button`
-  background: url(${({ src }) => src});
+  background: url(${({ src }) => (`../images/users/${src}.png`)});
   background-size: contain;
   border: 0;
   width: 32px;
